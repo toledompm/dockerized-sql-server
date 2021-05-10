@@ -17,20 +17,23 @@ Data
 
 will generate a database named **Foo**
 
-### 2 - Build image and bring containers up.
-``` bash
-# copies files from ./Data/*.[mdf | ldf] - also copies attach_db script and chmods it
-$ docker-compose build
+## Dockerfile
+The original article explained very well how to get up and running with a Dockerfile build, if you intend to go with that route I recomend you check them out.
 
+## Dockercompose
+### 2 - Build image and bring containers up.
+
+``` bash
 $ docker-compose up
 ```
 
 ### 3 - Run the attach script.
+
+*Wait for server to be brought up*
 Open another shell and run:
 ``` bash
 $ make attach
 ```
-*Wait for server to be brought up*
 
 ## Based on resources from the following article:
 [Run your SQL Server MDF file inside a linux Docker Container](https://www.mobilize.net/blog/run-your-sql-server-mdf-file-inside-a-linux-docker-container)

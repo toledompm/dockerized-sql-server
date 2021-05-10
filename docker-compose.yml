@@ -2,8 +2,11 @@ version: "3.9"
 
 services:
   db:
-    build: .
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    user: root
     ports:
       - 1433:1433
     env_file:
       - .env
+    volumes:
+      - ./Data:/db_files

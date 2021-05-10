@@ -10,4 +10,4 @@ COPY ./Data/*.ldf /db_files/
 RUN chmod +x /db_files/attach_db.sh
 RUN (/opt/mssql/bin/sqlservr --accept-eula & ) | grep -q "Service Broker manager has started"
 
-ENTRYPOINT /opt/mssql/bin/sqlservr
+ENTRYPOINT /db_files/attach_db.sh & /opt/mssql/bin/sqlservr
