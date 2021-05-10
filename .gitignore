@@ -1,0 +1,11 @@
+# Environment files
+environment
+.env
+
+
+# Database files
+./Data/*.sh
+*.mdf
+*.ldf
+
+
